@@ -1,12 +1,14 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfólio - Gabriel</title>
+    <meta name="description" content="Portfólio de Gabriel Themer Brito - Desenvolvedor Full Stack">
+    <meta name="keywords" content="portfolio, desenvolvedor, full stack, frontend, backend">
+    <title>Portfólio - Gabriel Themer Brito</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="dark-mode.css">
 </head>
 <body>
     <header>
@@ -19,184 +21,261 @@
                 <li><a href="#contato">Contato</a></li>
             </ul>
         </nav>
+        <div class="theme-switcher-wrapper">
+            <button id="themeSwitcher" class="theme-switcher" aria-label="Alternar modo noturno">
+                <i class="fas fa-moon"></i>
+            </button>
+        </div>
     </header>
 
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Ola me chamo <span class="highlight">Gabriel</span></h1>
-            <h2>Desenvolvedor Full Stack</h2>
-            <div class="social-icons">
-                <a href="#"><i class="fab fa-github"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
+    <main>
+        <section id="inicio" class="hero">
+            <div class="hero-content">
+                <h1>Olá, me chamo <span class="highlight">Gabriel Themer</span></h1>
+                <h2>Desenvolvedor Full Stack</h2>
+                <div class="social-icons">
+                    <a href="https://github.com/gahthemer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="https://www.instagram.com/gah_themer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://x.com/ttv_the_gaell" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                </div>
+                <a href="#contato" class="btn">Contate-me</a>
             </div>
-            <a href="#contato" class="btn">Contate-me</a>
-        </div>
-        <div class="hero-image">
-            <img src="eu-foto.jpg" alt="Foto de perfil">
-        </div>
-    </section>
+            <div class="hero-image">
+                <img src="eu-foto.jpg" alt="Foto de perfil de Gabriel Themer" loading="lazy">
+            </div>
+        </section>
 
-    <section id="sobre" class="section">
-        <h2 class="section-title">Sobre Mim</h2>
-        <div class="about-content">
-            <div class="about-text">
-                <p>Eu sou um desenvolvedor apaixonado por criar soluções digitais eficientes e bonitas. Tenho 1 anos de experiência no desenvolvimento web e mobile.</p>
-                <p>Meu objetivo é criar aplicações que não apenas tenham uma ótima aparência, mas que também ofereçam uma experiência de usuário excepcional e desempenho otimizado.</p>
-                <p>Quando não estou codando, você pode me encontrar fazendo academia,treinado ou jogando.</p>
-            </div>
-            <div class="about-info">
-                <div class="info-item">
-                    <span>Nome:</span>
-                    <p>Gabriel Themer Brito</p>
+        <section id="sobre" class="section">
+            <h2 class="section-title">Sobre Mim</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>Sou um desenvolvedor apaixonado por criar soluções digitais eficientes e bonitas. Com 1 ano de experiência no desenvolvimento web e mobile, busco sempre aprender e me atualizar.</p>
+                    <p>Meu objetivo é criar aplicações que não apenas tenham uma ótima aparência, mas que também ofereçam uma experiência de usuário excepcional e desempenho otimizado.</p>
+                    <p>Quando não estou codando, você pode me encontrar fazendo academia, treinando ou jogando.</p>
                 </div>
-                <div class="info-item">
-                    <span>Email:</span>
-                    <p>gabrielthemerbrito@gmail.com</p>
-                </div>
-                <div class="info-item">
-                    <span>Idade:</span>
-                    <p>23</p>
-                </div>
-                <div class="info-item">
-                    <span>De:</span>
-                    <p>Sorocaba, Br</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="habilidades" class="section">
-        <h2 class="section-title">Minhas Habilidades</h2>
-        <div class="skills-container">
-            <div class="skill-category">
-                <h3>Front-end</h3>
-                <div class="skill" data-level="90">
-                    <span>HTML/CSS</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="85">
-                    <span>JavaScript</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="80">
-                    <span>React</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Back-end</h3>
-                <div class="skill" data-level="75">
-                    <span>Node.js</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="70">
-                    <span>Java</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="65">
-                    <span>PHP</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-            </div>
-            
-            <div class="skill-category">
-                <h3>Outros</h3>
-                <div class="skill" data-level="80">
-                    <span>Git</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="75">
-                    <span>SQL</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-                <div class="skill" data-level="70">
-                    <span>MYSQL</span>
-                    <div class="skill-bar"><div class="skill-level"></div></div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="projetos" class="section">
-        <h2 class="section-title">Meus Projetos</h2>
-        <div class="projects-container">
-            <div class="project-card">
-                <img src="images/projeto1.jpg" alt="Projeto 1">
-                <div class="project-info">
-                    <h3>Nome do Projeto 1</h3>
-                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">Demo</a>
-                        <a href="#" class="btn">Código</a>
+                <div class="about-info">
+                    <div class="info-item">
+                        <span>Nome:</span>
+                        <p>Gabriel Themer Brito</p>
+                    </div>
+                    <div class="info-item">
+                        <span>Email:</span>
+                        <p>gabrielthemerbrito@gmail.com</p>
+                    </div>
+                    <div class="info-item">
+                        <span>Idade:</span>
+                        <p>23</p>
+                    </div>
+                    <div class="info-item">
+                        <span>Localização:</span>
+                        <p>Sorocaba, SP - Brasil</p>
                     </div>
                 </div>
             </div>
-            
-            <div class="project-card">
-                <img src="images/projeto2.jpg" alt="Projeto 2">
-                <div class="project-info">
-                    <h3>Nome do Projeto 2</h3>
-                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">Demo</a>
-                        <a href="#" class="btn">Código</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="project-card">
-                <img src="images/projeto3.jpg" alt="Projeto 3">
-                <div class="project-info">
-                    <h3>Nome do Projeto 3</h3>
-                    <p>Descrição breve do projeto e tecnologias utilizadas.</p>
-                    <div class="project-links">
-                        <a href="#" class="btn">Demo</a>
-                        <a href="#" class="btn">Código</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contato" class="section">
-        <h2 class="section-title">Entre em Contato</h2>
-        <div class="contact-container">
-            <form id="contact-form" class="contact-form">
-                <div class="form-group">
-                    <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+        <section id="habilidades" class="section">
+            <h2 class="section-title">Minhas Habilidades</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3>Front-end</h3>
+                    <div class="skill" data-level="90">
+                        <span>HTML/CSS</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="85">
+                        <span>JavaScript</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="80">
+                        <span>React</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                
+                <div class="skill-category">
+                    <h3>Back-end</h3>
+                    <div class="skill" data-level="75">
+                        <span>Node.js</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="70">
+                        <span>Java</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="65">
+                        <span>PHP</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <input type="text" id="subject" name="subject" placeholder="Assunto" required>
-                </div>
-                <div class="form-group">
-                    <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-                </div>
-                <button type="submit" class="btn">Enviar Mensagem</button>
-            </form>
-            <div class="contact-info">
-                <div class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <p>gabrielthemerbrito@gmail.com</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-phone"></i>
-                    <p>+55 (15) 9981-98262</p>
-                </div>
-                <div class="contact-item">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <p>Sorocaba,SP - BR </p>
+                
+                <div class="skill-category">
+                    <h3>Outros</h3>
+                    <div class="skill" data-level="80">
+                        <span>Git</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="75">
+                        <span>SQL</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
+                    <div class="skill" data-level="70">
+                        <span>MySQL</span>
+                        <div class="skill-bar"><div class="skill-level"></div></div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <section id="projetos" class="section">
+            <h2 class="section-title">Meus Projetos</h2>
+            <div class="projects-container">
+                <article class="project-card">
+                    <img src="images/projeto1.jpg" alt="Projeto Spotify Clone" loading="lazy">
+                    <div class="project-info">
+                        <h3>Spotify Clone</h3>
+                        <p>Clone da interface do Spotify usando HTML, CSS e JavaScript com funcionalidades básicas de player de música.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn" aria-label="Ver demonstração do projeto Spotify">Demo</a>
+                            <a href="#" class="btn" aria-label="Ver código fonte do projeto Spotify">Código</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <img src="images/projeto2.jpg" alt="Projeto Sistema de Hotelaria" loading="lazy">
+                    <div class="project-info">
+                        <h3>Sistema de Hotelaria</h3>
+                        <p>Sistema completo de reservas para hotéis desenvolvido com React no frontend e Node.js no backend.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn" aria-label="Ver demonstração do sistema de hotelaria">Demo</a>
+                            <a href="#" class="btn" aria-label="Ver código fonte do sistema de hotelaria">Código</a>
+                        </div>
+                    </div>
+                </article>
+                
+                <article class="project-card">
+                    <img src="images/projeto3.jpg" alt="Projeto Portfólio Pessoal" loading="lazy">
+                    <div class="project-info">
+                        <h3>Portfólio Pessoal</h3>
+                        <p>Este portfólio desenvolvido com HTML, CSS e JavaScript, responsivo e com modo escuro.</p>
+                        <div class="project-links">
+                            <a href="#" class="btn" aria-label="Ver demonstração do portfólio">Demo</a>
+                            <a href="#" class="btn" aria-label="Ver código fonte do portfólio">Código</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section id="contato" class="section">
+            <h2 class="section-title">Entre em Contato</h2>
+            <div class="contact-container">
+                <form id="contact-form" class="contact-form">
+                    <div class="form-group">
+                        <label for="name" class="sr-only">Seu Nome</label>
+                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="sr-only">Seu Email</label>
+                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject" class="sr-only">Assunto</label>
+                        <input type="text" id="subject" name="subject" placeholder="Assunto" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message" class="sr-only">Sua Mensagem</label>
+                        <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
+                    </div>
+                    <button type="submit" class="btn">Enviar Mensagem</button>
+                </form>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope" aria-hidden="true"></i>
+                        <p>gabrielthemerbrito@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone" aria-hidden="true"></i>
+                        <p>+55 (15) 9981-98262</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+                        <p>Sorocaba, SP - Brasil</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="tools-section">
+            <div class="typing-test-container">
+                <h2>Teste de Digitação</h2>
+                <p>Digite o texto abaixo o mais rápido e preciso possível:</p>
+                
+                <div class="text-display" id="textDisplay"></div>
+                
+                <textarea class="text-input" id="textInput" placeholder="Comece a digitar aqui..." aria-label="Área para teste de digitação"></textarea>
+                
+                <div class="stats">
+                    <div class="stat-box">
+                        <div class="stat-value" id="wpm">0</div>
+                        <div>PPM (Palavras por minuto)</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="accuracy">0%</div>
+                        <div>Precisão</div>
+                    </div>
+                    <div class="stat-box">
+                        <div class="stat-value" id="time">60</div>
+                        <div>Segundos restantes</div>
+                    </div>
+                </div>
+                
+                <button class="btn" id="restartBtn">Reiniciar Teste</button>
+            </div>
+
+            <div class="color-palette-generator">
+                <h2>Gerador de Paletas de Cores</h2>
+                
+                <div class="controls">
+                    <div class="color-input">
+                        <label for="baseColor">Cor base:</label>
+                        <input type="color" id="baseColor" value="#4CAF50">
+                    </div>
+                    
+                    <div>
+                        <label for="colorCount">Número de cores:</label>
+                        <input type="number" id="colorCount" min="3" max="12" value="5">
+                    </div>
+                    
+                    <div>
+                        <label for="colorScheme">Esquema de cores:</label>
+                        <select id="colorScheme" class="color-scheme-selector">
+                            <option value="monochromatic">Monocromático</option>
+                            <option value="analogous">Análogo</option>
+                            <option value="complementary">Complementar</option>
+                            <option value="triadic">Triádico</option>
+                            <option value="tetradic">Tetrádico</option>
+                        </select>
+                    </div>
+                    
+                    <button id="generateBtn" class="btn">Gerar Paleta</button>
+                    <button id="randomBtn" class="btn">Aleatório</button>
+                </div>
+                
+                <div class="palette-container" id="paletteContainer"></div>
+            </div>
+        </section>
+    </main>
 
     <footer>
-        <p>&copy; <span id="year"></span> Gabriel Themer. Todos os direitos reservados.</p>
+        <p>&copy; <span id="year"></span> Gabriel Themer Brito. Todos os direitos reservados.</p>
     </footer>
 
     <script src="script.js"></script>
