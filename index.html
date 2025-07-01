@@ -1,283 +1,298 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfólio de Gabriel Themer Brito - Desenvolvedor Full Stack">
-    <meta name="keywords" content="portfolio, desenvolvedor, full stack, frontend, backend">
-    <title>Portfólio - Gabriel Themer Brito</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="dark-mode.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Gabriel Themer Brito - Desenvolvedor Full Stack Hacker">
+  <meta name="keywords" content="portfolio, desenvolvedor, full stack, hacker, cybersecurity, web development">
+  <meta name="author" content="Gabriel Themer Brito">
+  <title>Portfólio - Gabriel Themer Brito</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-    <header>
-        <nav id="navbar">
-            <ul>
-                <li><a href="#inicio">Início</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#habilidades">Habilidades</a></li>
-                <li><a href="#projetos">Projetos</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-        <div class="theme-switcher-wrapper">
-            <button id="themeSwitcher" class="theme-switcher" aria-label="Alternar modo noturno">
-                <i class="fas fa-moon"></i>
-            </button>
+<body class="dark-mode">
+  <!-- Fundo animado (Efeito Matrix) -->
+  <canvas id="matrix"></canvas>
+
+  <!-- Navbar -->
+  <header class="fixed top-0 w-full bg-gray-900 bg-opacity-85 p-4 z-10">
+    <nav id="navbar" class="flex justify-center items-center space-x-8 text-lg">
+      <ul class="flex space-x-8">
+        <li><a href="#inicio" class="hover:text-cyan-400 transition-colors">Iniciar Sistema</a></li>
+        <li><a href="#sobre" class="hover:text-cyan-400 transition-colors">Dados do Operador</a></li>
+        <li><a href="#habilidades" class="hover:text-cyan-400 transition-colors">Protocolos Dominados</a></li>
+        <li><a href="#projetos" class="hover:text-cyan-400 transition-colors">Missões Concluídas</a></li>
+        <li><a href="#contato" class="hover:text-cyan-400 transition-colors">Canal Seguro</a></li>
+      </ul>
+      <div class="theme-switcher-wrapper">
+        <button id="themeSwitcher" class="theme-switcher" aria-label="Alternar interface">
+          <i class="fas fa-code"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Seção Hero -->
+  <main>
+    <section id="inicio" class="min-h-screen flex items-center justify-center p-8">
+      <div class="section max-w-4xl flex flex-col md:flex-row items-center">
+        <div class="hero-content text-center md:text-left">
+          <h1 class="text-4xl md:text-5xl">
+            Operador: <span class="typing highlight"></span>
+          </h1>
+          <h2 class="text-2xl mt-2">Engenheiro de Sistemas Full Stack</h2>
+          <div class="social-icons mt-4 flex justify-center md:justify-start space-x-4">
+            <a href="https://github.com/gahthemer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+              <i class="fab fa-github text-2xl"></i>
+            </a>
+            <a href="https://www.instagram.com/gah_themer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <i class="fab fa-instagram text-2xl"></i>
+            </a>
+            <a href="https://x.com/ttv_the_gaell" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <i class="fab fa-twitter text-2xl"></i>
+            </a>
+          </div>
+          <a href="#contato" class="btn mt-6 inline-block">Iniciar Comunicação</a>
         </div>
-    </header>
+        <div class="hero-image mt-6 md:mt-0 md:ml-8">
+          <img src="eu-foto.jpg" alt="Foto de perfil de Gabriel Themer" loading="lazy" class="rounded-lg shadow-neon">
+        </div>
+      </div>
+    </section>
 
-    <main>
-        <section id="inicio" class="hero">
-            <div class="hero-content">
-                <h1>Olá, me chamo <span class="highlight">Gabriel Themer</span></h1>
-                <h2>Desenvolvedor Full Stack</h2>
-                <div class="social-icons">
-                    <a href="https://github.com/gahthemer" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.instagram.com/gah_themer/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                        <i class="fab fa-instagram"></i>
-                    </a>
-                    <a href="https://x.com/ttv_the_gaell" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
-                        <i class="fab fa-twitter"></i>
-                    </a>
-                </div>
-                <a href="#contato" class="btn">Contate-me</a>
+    <!-- Seção Sobre -->
+    <section id="sobre" class="min-h-screen p-8 flex items-center justify-center">
+      <div class="section max-w-4xl p-8 rounded-lg">
+        <h2 class="section-title text-3xl glitch">Dados do Operador</h2>
+        <div class="about-content flex flex-col md:flex-row mt-6">
+          <div class="about-text flex-1">
+            <p>[SYSLOG] Operador apaixonado por desenvolver sistemas digitais robustos e otimizados. Experiência operacional: 1 ano em desenvolvimento web e mobile.</p>
+            <p>[OBJETIVO] Criar arquiteturas que garantam performance e experiência de usuário superiores, com foco em eficiência e estética.</p>
+            <p>[OFFLINE] Atividades: Treinamento físico, musculação e jogos estratégicos.</p>
+          </div>
+          <div class="about-info flex-1 mt-6 md:mt-0 md:ml-8">
+            <div class="info-item"><span>ID:</span><p>Gabriel Themer Brito</p></div>
+            <div class="info-item"><span>Comms:</span><p>gabrielthemerbrito@gmail.com</p></div>
+            <div class="info-item"><span>Ciclo:</span><p>23</p></div>
+            <div class="info-item"><span>Base:</span><p>Sorocaba, SP - Brasil</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Habilidades -->
+    <section id="habilidades" class="min-h-screen p-8">
+      <h2 class="section-title text-3xl glitch text-center">Protocolos Dominados</h2>
+      <div class="skills-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+        <div class="skill-category">
+          <h3 class="text-xl text-center">Interface</h3>
+          <div class="skill-circle" data-level="90">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">HTML/CSS</span>
+            <span class="skill-percentage">90%</span>
+          </div>
+          <div class="skill-circle" data-level="85">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">JavaScript</span>
+            <span class="skill-percentage">85%</span>
+          </div>
+          <div class="skill-circle" data-level="80">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">React</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="text-xl text-center">Núcleo</h3>
+          <div class="skill-circle" data-level="75">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">Node.js</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-circle" data-level="70">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">Java</span>
+            <span class="skill-percentage">70%</span>
+          </div>
+          <div class="skill-circle" data-level="65">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">PHP</span>
+            <span class="skill-percentage">65%</span>
+          </div>
+        </div>
+        <div class="skill-category">
+          <h3 class="text-xl text-center">Utilitários</h3>
+          <div class="skill-circle" data-level="80">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">Git</span>
+            <span class="skill-percentage">80%</span>
+          </div>
+          <div class="skill-circle" data-level="75">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">SQL</span>
+            <span class="skill-percentage">75%</span>
+          </div>
+          <div class="skill-circle" data-level="70">
+            <svg class="progress-ring" width="120" height="120">
+              <circle class="progress-ring__circle-bg" cx="60" cy="60" r="50" />
+              <circle class="progress-ring__circle" cx="60" cy="60" r="50" />
+            </svg>
+            <span class="skill-name">MySQL</span>
+            <span class="skill-percentage">70%</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Projetos -->
+    <section id="projetos" class="min-h-screen p-8">
+      <h2 class="section-title text-3xl glitch text-center">Missões Concluídas</h2>
+      <div class="projects-container grid grid-cols-1 md:grid-cols-3 gap-8 mt-8 max-w-5xl mx-auto">
+        <article class="project-card section p-6 rounded-lg">
+          <img src="images/projeto1.jpg" alt="Projeto Spotify Clone" loading="lazy" class="rounded-lg">
+          <div class="project-info">
+            <h3 class="text-xl">Operação: Spotify Clone</h3>
+            <p>Replicação da interface do Spotify com funcionalidades de player, utilizando HTML, CSS e JavaScript.</p>
+            <div class="project-links flex space-x-4 mt-4">
+              <a href="#" class="btn" aria-label="Ver demonstração do projeto Spotify">Acessar Demo</a>
+              <a href="#" class="btn" aria-label="Ver código fonte do projeto Spotify">Código-Fonte</a>
             </div>
-            <div class="hero-image">
-                <img src="eu-foto.jpg" alt="Foto de perfil de Gabriel Themer" loading="lazy">
+          </div>
+        </article>
+        <article class="project-card section p-6 rounded-lg">
+          <img src="images/projeto2.jpg" alt="Projeto Sistema de Hotelaria" loading="lazy" class="rounded-lg">
+          <div class="project-info">
+            <h3 class="text-xl">Operação: Sistema de Hotelaria</h3>
+            <p>Sistema de reservas hoteleiras com frontend em React e backend em Node.js.</p>
+            <div class="project-links flex space-x-4 mt-4">
+              <a href="#" class="btn" aria-label="Ver demonstração do sistema de hotelaria">Acessar Demo</a>
+              <a href="#" class="btn" aria-label="Ver código fonte do sistema de hotelaria">Código-Fonte</a>
             </div>
-        </section>
-
-        <section id="sobre" class="section">
-            <h2 class="section-title">Sobre Mim</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Sou um desenvolvedor apaixonado por criar soluções digitais eficientes e bonitas. Com 1 ano de experiência no desenvolvimento web e mobile, busco sempre aprender e me atualizar.</p>
-                    <p>Meu objetivo é criar aplicações que não apenas tenham uma ótima aparência, mas que também ofereçam uma experiência de usuário excepcional e desempenho otimizado.</p>
-                    <p>Quando não estou codando, você pode me encontrar fazendo academia, treinando ou jogando.</p>
-                </div>
-                <div class="about-info">
-                    <div class="info-item">
-                        <span>Nome:</span>
-                        <p>Gabriel Themer Brito</p>
-                    </div>
-                    <div class="info-item">
-                        <span>Email:</span>
-                        <p>gabrielthemerbrito@gmail.com</p>
-                    </div>
-                    <div class="info-item">
-                        <span>Idade:</span>
-                        <p>23</p>
-                    </div>
-                    <div class="info-item">
-                        <span>Localização:</span>
-                        <p>Sorocaba, SP - Brasil</p>
-                    </div>
-                </div>
+          </div>
+        </article>
+        <article class="project-card section p-6 rounded-lg">
+          <img src="images/projeto3.jpg" alt="Projeto Portfólio Pessoal" loading="lazy" class="rounded-lg">
+          <div class="project-info">
+            <h3 class="text-xl">Operação: Interface Pessoal</h3>
+            <p>Portfólio responsivo com tema hacker, desenvolvido com HTML, CSS e JavaScript.</p>
+            <div class="project-links flex space-x-4 mt-4">
+              <a href="#" class="btn" aria-label="Ver demonstração do portfólio">Acessar Demo</a>
+              <a href="#" class="btn" aria-label="Ver código fonte do portfólio">Código-Fonte</a>
             </div>
-        </section>
+          </div>
+        </article>
+      </div>
+    </section>
 
-        <section id="habilidades" class="section">
-            <h2 class="section-title">Minhas Habilidades</h2>
-            <div class="skills-container">
-                <div class="skill-category">
-                    <h3>Front-end</h3>
-                    <div class="skill" data-level="90">
-                        <span>HTML/CSS</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="85">
-                        <span>JavaScript</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="80">
-                        <span>React</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Back-end</h3>
-                    <div class="skill" data-level="75">
-                        <span>Node.js</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="70">
-                        <span>Java</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="65">
-                        <span>PHP</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                </div>
-                
-                <div class="skill-category">
-                    <h3>Outros</h3>
-                    <div class="skill" data-level="80">
-                        <span>Git</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="75">
-                        <span>SQL</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                    <div class="skill" data-level="70">
-                        <span>MySQL</span>
-                        <div class="skill-bar"><div class="skill-level"></div></div>
-                    </div>
-                </div>
+    <!-- Seção Contato -->
+    <section id="contato" class="min-h-screen flex items-center justify-center p-8">
+      <div class="section max-w-4xl p-8 rounded-lg">
+        <h2 class="section-title text-3xl glitch">Canal Seguro</h2>
+        <div class="contact-container flex flex-col md:flex-row mt-6">
+          <div class="contact-form flex-1">
+            <div class="form-group">
+              <label for="name" class="sr-only">Identificação</label>
+              <input type="text" id="name" name="name" placeholder="Identificação" required>
             </div>
-        </section>
-
-        <section id="projetos" class="section">
-            <h2 class="section-title">Meus Projetos</h2>
-            <div class="projects-container">
-                <article class="project-card">
-                    <img src="images/projeto1.jpg" alt="Projeto Spotify Clone" loading="lazy">
-                    <div class="project-info">
-                        <h3>Spotify Clone</h3>
-                        <p>Clone da interface do Spotify usando HTML, CSS e JavaScript com funcionalidades básicas de player de música.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn" aria-label="Ver demonstração do projeto Spotify">Demo</a>
-                            <a href="#" class="btn" aria-label="Ver código fonte do projeto Spotify">Código</a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="project-card">
-                    <img src="images/projeto2.jpg" alt="Projeto Sistema de Hotelaria" loading="lazy">
-                    <div class="project-info">
-                        <h3>Sistema de Hotelaria</h3>
-                        <p>Sistema completo de reservas para hotéis desenvolvido com React no frontend e Node.js no backend.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn" aria-label="Ver demonstração do sistema de hotelaria">Demo</a>
-                            <a href="#" class="btn" aria-label="Ver código fonte do sistema de hotelaria">Código</a>
-                        </div>
-                    </div>
-                </article>
-                
-                <article class="project-card">
-                    <img src="images/projeto3.jpg" alt="Projeto Portfólio Pessoal" loading="lazy">
-                    <div class="project-info">
-                        <h3>Portfólio Pessoal</h3>
-                        <p>Este portfólio desenvolvido com HTML, CSS e JavaScript, responsivo e com modo escuro.</p>
-                        <div class="project-links">
-                            <a href="#" class="btn" aria-label="Ver demonstração do portfólio">Demo</a>
-                            <a href="#" class="btn" aria-label="Ver código fonte do portfólio">Código</a>
-                        </div>
-                    </div>
-                </article>
+            <div class="form-group">
+              <label for="email" class="sr-only">Comms</label>
+              <input type="email" id="email" name="email" placeholder="Comms" required>
             </div>
-        </section>
-
-        <section id="contato" class="section">
-            <h2 class="section-title">Entre em Contato</h2>
-            <div class="contact-container">
-                <form id="contact-form" class="contact-form">
-                    <div class="form-group">
-                        <label for="name" class="sr-only">Seu Nome</label>
-                        <input type="text" id="name" name="name" placeholder="Seu Nome" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="email" class="sr-only">Seu Email</label>
-                        <input type="email" id="email" name="email" placeholder="Seu Email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="subject" class="sr-only">Assunto</label>
-                        <input type="text" id="subject" name="subject" placeholder="Assunto" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="message" class="sr-only">Sua Mensagem</label>
-                        <textarea id="message" name="message" placeholder="Sua Mensagem" required></textarea>
-                    </div>
-                    <button type="submit" class="btn">Enviar Mensagem</button>
-                </form>
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-envelope" aria-hidden="true"></i>
-                        <p>gabrielthemerbrito@gmail.com</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone" aria-hidden="true"></i>
-                        <p>+55 (15) 9981-98262</p>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
-                        <p>Sorocaba, SP - Brasil</p>
-                    </div>
-                </div>
+            <div class="form-group">
+              <label for="subject" class="sr-only">Assunto</label>
+              <input type="text" id="subject" name="subject" placeholder="Assunto" required>
             </div>
-        </section>
-
-        <section class="tools-section">
-            <div class="typing-test-container">
-                <h2>Teste de Digitação</h2>
-                <p>Digite o texto abaixo o mais rápido e preciso possível:</p>
-                
-                <div class="text-display" id="textDisplay"></div>
-                
-                <textarea class="text-input" id="textInput" placeholder="Comece a digitar aqui..." aria-label="Área para teste de digitação"></textarea>
-                
-                <div class="stats">
-                    <div class="stat-box">
-                        <div class="stat-value" id="wpm">0</div>
-                        <div>PPM (Palavras por minuto)</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value" id="accuracy">0%</div>
-                        <div>Precisão</div>
-                    </div>
-                    <div class="stat-box">
-                        <div class="stat-value" id="time">60</div>
-                        <div>Segundos restantes</div>
-                    </div>
-                </div>
-                
-                <button class="btn" id="restartBtn">Reiniciar Teste</button>
+            <div class="form-group">
+              <label for="message" class="sr-only">Transmissão</label>
+              <textarea id="message" name="message" placeholder="Transmissão" required></textarea>
             </div>
+            <button type="button" class="btn">Enviar Transmissão</button>
+          </div>
+          <div class="contact-info flex-1 mt-6 md:mt-0 md:ml-8">
+            <div class="contact-item"><i class="fas fa-envelope"></i><p>gabrielthemerbrito@gmail.com</p></div>
+            <div class="contact-item"><i class="fas fa-phone"></i><p>+55 (15) 9981-98262</p></div>
+            <div class="contact-item"><i class="fas fa-map-marker-alt"></i><p>Sorocaba, SP - Brasil</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="color-palette-generator">
-                <h2>Gerador de Paletas de Cores</h2>
-                
-                <div class="controls">
-                    <div class="color-input">
-                        <label for="baseColor">Cor base:</label>
-                        <input type="color" id="baseColor" value="#4CAF50">
-                    </div>
-                    
-                    <div>
-                        <label for="colorCount">Número de cores:</label>
-                        <input type="number" id="colorCount" min="3" max="12" value="5">
-                    </div>
-                    
-                    <div>
-                        <label for="colorScheme">Esquema de cores:</label>
-                        <select id="colorScheme" class="color-scheme-selector">
-                            <option value="monochromatic">Monocromático</option>
-                            <option value="analogous">Análogo</option>
-                            <option value="complementary">Complementar</option>
-                            <option value="triadic">Triádico</option>
-                            <option value="tetradic">Tetrádico</option>
-                        </select>
-                    </div>
-                    
-                    <button id="generateBtn" class="btn">Gerar Paleta</button>
-                    <button id="randomBtn" class="btn">Aleatório</button>
-                </div>
-                
-                <div class="palette-container" id="paletteContainer"></div>
+    <!-- Seção Ferramentas -->
+    <section class="tools-section min-h-screen p-8">
+      <div class="section max-w-4xl mx-auto p-8 rounded-lg">
+        <div class="typing-test-container">
+          <h2 class="text-2xl glitch">Simulador de Interface</h2>
+          <p>Teste suas habilidades de entrada de dados:</p>
+          <div class="text-display" id="textDisplay"></div>
+          <textarea class="text-input" id="textInput" placeholder="Iniciar transmissão de dados..." aria-label="Área para teste de digitação"></textarea>
+          <div class="stats flex space-x-4 mt-4">
+            <div class="stat-box"><div class="stat-value" id="wpm">0</div><div>PPM</div></div>
+            <div class="stat-box"><div class="stat-value" id="accuracy">0%</div><div>Precisão</div></div>
+            <div class="stat-box"><div class="stat-value" id="time">60</div><div>Segundos</div></div>
+          </div>
+          <button class="btn mt-4" id="restartBtn">Reiniciar Simulação</button>
+        </div>
+        <div class="color-palette-generator mt-8">
+          <h2 class="text-2xl glitch">Gerador de Códigos Visuais</h2>
+          <div class="controls flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 mt-4">
+            <div class="color-input">
+              <label for="baseColor">Código Base:</label>
+              <input type="color" id="baseColor" value="#00b894">
             </div>
-        </section>
-    </main>
+            <div>
+              <label for="colorCount">Quantidade de Códigos:</label>
+              <input type="number" id="colorCount" min="3" max="12" value="5">
+            </div>
+            <div>
+              <label for="colorScheme">Esquema de Cores:</label>
+              <select id="colorScheme" class="color-scheme-selector">
+                <option value="monochromatic">Monocromático</option>
+                <option value="analogous">Análogo</option>
+                <option value="complementary">Complementar</option>
+                <option value="triadic">Triádico</option>
+                <option value="tetradic">Tetrádico</option>
+              </select>
+            </div>
+            <button id="generateBtn" class="btn">Gerar Paleta</button>
+            <button id="randomBtn" class="btn">Aleatório</button>
+          </div>
+          <div class="palette-container grid grid-cols-2 md:grid-cols-5 gap-4 mt-4" id="paletteContainer"></div>
+        </div>
+      </div>
+    </section>
+  </main>
 
-    <footer>
-        <p>&copy; <span id="year"></span> Gabriel Themer Brito. Todos os direitos reservados.</p>
-    </footer>
+  <!-- Footer -->
+  <footer class="bg-gray-900 bg-opacity-85 p-4 text-center">
+    <p>© <span id="year"></span> Gabriel Themer Brito. Todos os sistemas reservados.</p>
+  </footer>
 
-    <script src="script.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
